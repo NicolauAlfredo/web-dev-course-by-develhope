@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Modulo di Registrazione Abbonamento</title>
+</head>
+<body>
+    <header>
+        <h1>Modulo di Registrazione Abbonamento</h1>
+    </header>
+
+    <main>
+        <form action="submit_registration.php" method="post">
+            <fieldset>
+                <legend>Dati Personali</legend>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required autocomplete="new-password">
+                </div>
+
+                <div>
+                    <label for="fullname">Nome e Cognome:</label>
+                    <input type="text" id="fullname" name="fullname" required autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="dob">Data di Nascita:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div>
+                    <label for="phone">Numero di Telefono:</label>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" pattern="[0-9]{10,15}" inputmode="tel" maxlength="15">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Piano di Abbonamento</legend>
+
+                <div>
+                    <label for="plan">Scegli il piano:</label>
+                    <select id="plan" name="plan" required>
+                        <option value="free">Piano Free</option>
+                        <optgroup label="Piani a pagamento">
+                            <option value="basic">Basic - €5/mese</option>
+                            <option value="standard">Standard - €10/mese</option>
+                            <option value="premium">Premium - €20/mese</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="pro" name="pro">
+                    <label for="pro">Attiva il piano Pro</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dati di Pagamento</legend>
+
+                <div>
+                    <label for="cardnumber">Numero Carta:</label>
+                    <input type="text" id="cardnumber" name="cardnumber" required autocomplete="cc-number"
+                        pattern="[0-9]{16}" maxlength="16" inputmode="numeric">
+                </div>
+
+                <div>
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc" name="cvc" required autocomplete="cc-csc"
+                        pattern="[0-9]{3,4}" maxlength="4" inputmode="numeric">
+                </div>
+
+                <div>
+                    <label for="expiry">Scadenza:</label>
+                    <input type="month" id="expiry" name="expiry" required autocomplete="cc-exp">
+                </div>
+
+                <div>
+                    <label for="billing">Indirizzo di Fatturazione:</label>
+                    <input type="text" id="billing" name="billing" required autocomplete="billing street-address">
+                </div>
+            </fieldset>
+
+            <div>
+                <button type="submit">Registrati</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
