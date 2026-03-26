@@ -22,20 +22,20 @@ The purpose of this repository is to:
 * Serve as a future reference
 * Build a solid foundation for more advanced projects
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * HTML5
 * CSS3
 * Visual Studio Code
 
-## 🚧 Project Status
+## Project Status
 
 Work in progress — regularly updated as I move forward in the course.
 
-## 📌 Notes
+## Notes
 
 Some personal files (notes, drafts, etc.) are excluded using `.gitignore` and are not part of this repository.
 
 ---
 
-💡 This repository is part of my continuous learning journey in web development.
+This repository is part of my continuous learning journey in web development.
