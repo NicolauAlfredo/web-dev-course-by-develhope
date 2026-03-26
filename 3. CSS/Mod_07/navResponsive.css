@@ -1,0 +1,66 @@
+/* RESET BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #f8f9fa;
+}
+
+/* NAV LIST */
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* SEARCH */
+.search-wrapper {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* HAMBURGER (default nascosto) */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+/* =========================
+   RESPONSIVE < 768px
+   ========================= */
+
+@media (max-width: 768px) {
+  .nav-list,
+  .search-wrapper {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}

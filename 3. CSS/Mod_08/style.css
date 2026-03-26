@@ -1,0 +1,151 @@
+:root {
+  --bg: #f3f4f6;
+  --card-gradient: linear-gradient(180deg, #4f46e5, #3730a3);
+  --text: #ffffff;
+  --accent: #22c55e;
+  --btn-bg: #e5e7eb;
+  --btn-text: #111827;
+
+  --radius: 20px;
+  --shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  padding: 40px;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.titolo-sezione {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.grid-corsi {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  gap: 24px;
+
+  justify-content: center;
+}
+
+.card {
+  background: var(--card-gradient);
+  color: var(--text);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 380px;
+}
+
+.card-top {
+  height: 110px;
+  overflow: hidden;
+}
+
+.card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+}
+
+.card h3 {
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(34, 197, 94, 0.7);
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .card {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-corsi {
+    grid-template-columns: repeat(2, 320px);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-corsi {
+    grid-template-columns: 1fr;
+  }
+}

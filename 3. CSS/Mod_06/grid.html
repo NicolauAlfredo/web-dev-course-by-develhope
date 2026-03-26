@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #fff;
+        font-family: Arial, sans-serif;
+      }
+
+      /* CONTAINER GRID */
+      .container {
+        display: grid;
+        grid-template-columns: repeat(3, 120px) 1fr 120px;
+        height: 100vh;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      /* COLONNE */
+      .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        overflow-y: auto; /* evita overflow verticale */
+      }
+
+      /* COLORI */
+      .yellow {
+        background: #e6e39a;
+      }
+
+      .red {
+        background: #e7a0a0;
+      }
+
+      .green {
+        background: #9fddb0;
+      }
+
+      .orange {
+        background: #e6c49a;
+      }
+
+      .blue {
+        background: #9bbad3;
+      }
+
+      /* TITOLI */
+      h3 {
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      /* BOX */
+      .box {
+        width: 40px;
+        height: 40px;
+        background: #eee;
+        margin-bottom: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col yellow">
+        <h3>YELLOW</h3>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+      </div>
+
+      <div class="col red">
+        <h3>RED</h3>
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+      </div>
+
+      <div class="col green">
+        <h3>GREEN</h3>
+      </div>
+
+      <div class="col orange">
+        <h3>ORANGE</h3>
+      </div>
+
+      <div class="col blue">
+        <h3>BLUE</h3>
+      </div>
+    </div>
+  </body>
+</html>
