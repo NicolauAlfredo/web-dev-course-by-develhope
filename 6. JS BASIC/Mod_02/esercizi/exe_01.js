@@ -22,3 +22,4 @@ console.log(porkPrice);
 /* Crea una variabile che contiene al suo interno la somma di due numeri, moltiplicata per due. */
 let sumResult = (3 + 4) * 2;
 console.log(sumResult);
+
