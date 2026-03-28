@@ -7,3 +7,4 @@ let isHungry = true;
 console.log(
   `itIsRaining: ${itIsRaining}, isSunny: ${isSunny}, isWeekend: ${isWeekend}, hasHomework: ${hasHomework}, isHungry: ${isHungry}`,
 );
+
