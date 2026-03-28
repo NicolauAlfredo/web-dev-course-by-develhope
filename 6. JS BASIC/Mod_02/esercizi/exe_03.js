@@ -11,3 +11,4 @@ console.log(
     " è uguale a: " +
     rectangleArea,
 );
+
