@@ -11,3 +11,4 @@ let isGraduatedNumber = Number(isGraduated);
 console.log(helloBoolean);
 console.log(ageString);
 console.log(isGraduatedNumber);
+
