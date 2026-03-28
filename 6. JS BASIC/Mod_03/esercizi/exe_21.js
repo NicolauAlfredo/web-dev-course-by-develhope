@@ -1,4 +1,4 @@
-let tariffa = "BB";  
+const tariffa = "FB";
 
 switch (tariffa) {
   case "BB":
