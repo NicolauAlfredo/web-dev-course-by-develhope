@@ -6,3 +6,4 @@ const sayHelloName = (callback) => {
 };
 
 sayHelloName(printName);
+
