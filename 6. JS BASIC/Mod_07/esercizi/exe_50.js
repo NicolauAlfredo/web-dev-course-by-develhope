@@ -14,3 +14,4 @@ const numbers = [
 ];
 
 console.log(getPrimes(numbers));
+
