@@ -5,61 +5,48 @@ const students = [
   { id: 4, name: "Carmelo", surname: "Verdi", age: 18, hobby: "photographer" },
 ];
 
-// Funzione per restituire il motto in base all'hobby
-function getMotto(hobby) {
-  if (hobby === "gamer") {
-    return "Life Is a Game, Play to Win!";
-  } else if (hobby === "sportsman") {
-    return "Never give up!";
-  } else if (hobby === "photographer") {
-    return "A picture is worth a thousand words!";
-  }
-}
+// Mappa hobby → motto
+const mottoMap = {
+  gamer: "Life Is a Game, Play to Win!",
+  sportsman: "Never give up!",
+  photographer: "A picture is worth a thousand words!",
+};
 
-// Funzione per trovare lo studente più giovane
-function getYoungest(students) {
-  let youngest = students[0];
+// Arrow function
+const getMotto = (hobby) => mottoMap[hobby] || "No motto available";
 
-  for (let i = 1; i < students.length; i++) {
-    if (students[i].age < youngest.age) {
-      youngest = students[i];
-    }
-  }
+// Studente più giovane (reduce)
+const getYoungest = (students) =>
+  students.reduce((youngest, current) =>
+    current.age < youngest.age ? current : youngest
+  );
 
-  return youngest;
-}
-
-// Funzione per trovare il cognome più lungo
-function getLongestSurname(students) {
-  let longest = students[0];
-
-  for (let i = 1; i < students.length; i++) {
-    if (students[i].surname.length > longest.surname.length) {
-      longest = students[i];
-    }
-  }
-
-  return longest.surname;
-}
+// Cognome più lungo (restituisce oggetto per coerenza)
+const getLongestSurname = (students) =>
+  students.reduce((longest, current) =>
+    current.surname.length > longest.surname.length ? current : longest
+  );
 
 // Funzione principale
-function printStudents(students) {
-  for (let i = 0; i < students.length; i++) {
-    console.log(students[i].name);
-    console.log(getMotto(students[i].hobby));
-  }
+const printStudents = (students) => {
+  students.forEach((student) => {
+    console.log(`${student.name} ${student.surname}`);
+    console.log(getMotto(student.hobby));
+  });
 
   const youngest = getYoungest(students);
-  console.log("Il più giovane è", youngest.name);
+  console.log(`Il più giovane è ${youngest.name} ${youngest.surname}`);
 
-  const longestSurname = getLongestSurname(students);
-  console.log("Il cognome più lungo è", longestSurname);
-}
+  const longest = getLongestSurname(students);
+  console.log(
+    `Il cognome più lungo è ${longest.surname} (${longest.name})`
+  );
+};
 
 // Esecuzione iniziale
 printStudents(students);
 
-// Aggiungere Elena al terzo posto (indice 2)
+// Aggiunta Elena
 students.splice(2, 0, {
   id: 5,
   name: "Elena",
@@ -68,5 +55,5 @@ students.splice(2, 0, {
   hobby: "photographer",
 });
 
-// Eseguire di nuovo la funzione
+// Riesecuzione
 printStudents(students);
