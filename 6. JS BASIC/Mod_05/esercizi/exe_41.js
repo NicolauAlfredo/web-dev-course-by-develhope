@@ -1,14 +1,13 @@
-const student = {
-  id: 1,
-  school: "Liceo",
-  year: 3,
-  personalData: {
-    // oggetto annidato
-    name: "Nicolau",
-    surname: "Alfredo",
-    age: 16,
-  },
+const smartphone = {
+  brand: "Apple",
+  name: "iPhone 13",
+  price: 1300,
 };
 
-// Stampa l'oggetto annidato personalData
-console.log(student.personalData);
+// rendiamo l'oggetto immutabile
+Object.freeze(smartphone);
+
+// tentativo di modifica (verrà ignorato in strict mode o fallirà)
+smartphone.price = 100;
+
+console.log(smartphone);
