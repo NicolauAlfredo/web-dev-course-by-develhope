@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: center;
+}
+
+.form__title {
+  font-size: 2rem;
+  color: #111827;
+}
+
+.form__subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.form__input {
+  padding: 14px 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 14px;
+
+  font-size: 1rem;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form__input:focus {
+  border-color: #2563eb;
+
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.form__button {
+  padding: 14px 16px;
+
+  border: none;
+  border-radius: 14px;
+
+  background-color: #2563eb;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form__button:hover {
+  background-color: #1d4ed8;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+.form__button:active {
+  transform: scale(0.98);
+}
+
+.account-result {
+  display: none;
+
+  padding: 20px;
+  border-radius: 16px;
+
+  background-color: #eff6ff;
+  border: 2px solid #bfdbfe;
+
+  color: #111827;
+}
+
+.account-result__title {
+  margin-bottom: 12px;
+
+  color: #1d4ed8;
+  font-size: 1.3rem;
+}
+
+.account-result p {
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.account-result strong {
+  color: #111827;
+}
