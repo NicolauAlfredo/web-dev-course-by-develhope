@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lezione 04 - Cercare nel DOM</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #dce6f2);
+      color: #1f2937;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+      gap: 24px;
+    }
+
+    h1 {
+      background-color: #ffffff;
+      color: #111827;
+      padding: 20px 28px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    ul {
+      width: 100%;
+      max-width: 480px;
+      list-style: none;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    li {
+      background-color: #f3f4f6;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    li:hover {
+      background-color: #e0f2fe;
+      transform: translateX(6px);
+    }
+
+    input {
+      width: 100%;
+      max-width: 480px;
+      padding: 14px 18px;
+      border: 2px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 1rem;
+      outline: none;
+      background-color: #ffffff;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+    }
+
+    input::placeholder {
+      color: #9ca3af;
+    }
+  </style>
+  <body>
+    <h1>Lezione 04 - Cercare nel DOM</h1>
+
+    <ul id="my-ul">
+      <li class="my-li">Hello World</li>
+      <li class="my-li">I'm working on the DOM</li>
+      <li class="my-li">How is it going?</li>
+    </ul>
+
+    <input type="text" name="my-input" />
+    <script type="module" src="lezione_04.js"></script>
+  </body>
+</html>
