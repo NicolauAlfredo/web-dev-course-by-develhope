@@ -45,9 +45,9 @@ All content is generated dynamically from the API response.
 ```txt
 project-folder/
 │
-├── index.html
-├── style.css
-└── script.js
+├── esercizio98.html
+├── esercizio98.css
+└── esercizio98.js
 ```
 
 ## How to Run
