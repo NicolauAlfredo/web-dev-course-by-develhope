@@ -28,3 +28,25 @@ function checkDirection(direction: Direction) {
 const myDirection: Direction = Direction.Right;
 
 console.log(checkDirection(myDirection));
+
+enum OrderStatus {
+  Pending,
+  InProgress,
+  Shipped,
+  Completed,
+  Cancelled,
+}
+
+type Order = {
+  id: number;
+  date: Date;
+  status: OrderStatus;
+};
+
+const order1: Order = {
+  id: 1,
+  date: new Date(),
+  status: OrderStatus.Completed,
+};
+
+console.log(order1);
