@@ -1,11 +1,8 @@
 class Point {
-  x: number;
-  y: number;
-
-  constructor(x: number, y: number) {
-    this.x = x;
-    this.y = y;
-  }
+  constructor(
+    public x: number,
+    public y: number,
+  ) {}
 
   distance(other: Point) {
     return Math.sqrt((this.x - other.x) ** 2 + (this.y - other.y) ** 2);
@@ -13,15 +10,16 @@ class Point {
 }
 
 class ColorePoint extends Point {
-  color: string;
-
-  constructor(x: number, y: number, color: string) {
+  constructor(
+    public x: number,
+    public y: number,
+    public color: string,
+  ) {
     super(x, y);
-    this.color = color;
   }
 }
 
-const p1 = new Point(1, 2);
+const p1 = new ColorePoint(0, 2, "blue");
 const p2 = new Point(1, 4);
 
 console.log(p1.distance(p2));
