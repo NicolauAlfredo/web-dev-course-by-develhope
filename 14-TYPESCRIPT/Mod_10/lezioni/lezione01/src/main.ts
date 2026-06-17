@@ -1,0 +1,1 @@
+console.log("Creare nuovo tsconfig.json: npx tsc --init")
