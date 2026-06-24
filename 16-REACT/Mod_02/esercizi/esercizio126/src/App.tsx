@@ -3,7 +3,7 @@ import { Welcome } from "./components/Welcome";
 export function App() {
   return (
     <div>
-      <Welcome name="Nicolau" age={25} />
+      <Welcome name="John" age={25} />
     </div>
   );
 }
